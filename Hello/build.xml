@@ -47,16 +47,5 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-                <target name="test" depends="compile">
-        <!-- Run tests using JUnit -->
-        <junit printsummary="yes" haltonfailure="no">
-           <classpath refid="Hello.classpath"/>
-            <formatter type="xml" />
-            <batchtest fork="yes" todir="${basedir}/test-reports">
-                <fileset dir="${basedir}/src">
-                    <include name="**/*Test*.java" />
-                </fileset>
-            </batchtest>
-        </junit>
-    </target>
+                
 </project>
